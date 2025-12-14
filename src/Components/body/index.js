@@ -67,7 +67,6 @@ function Body() {
       <div className="body1">
         <div className="discription">
           <div className="helloWorld"></div>
-          <h1>Portfolio Introduction</h1>
           <h1>
             &lt;Hello World! &gt; <br /> I'm{" "}
             <span style={{ color: "#1976d2" }}>Kathan</span> Shah

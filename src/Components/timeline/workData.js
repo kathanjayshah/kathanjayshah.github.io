@@ -2,11 +2,31 @@ import { color } from "../styling/color";
 
 export const jobs = [
   {
+    company: "Ground Control",
+    role: "Senior Software Developer",
+    src: "https://cdn.prod.website-files.com/67a19a0ef3b78d34a2d94a47/67a19fed03b9228fab7f0cca_Group%204.svg",
+    duration: "October 2025 - Present",
+    place: "St. John's, NL",
+    description: [
+      "Currently, I’m working on ORCA security alerts to help secure our application against attacks such as SSRF and CSRF, while building and maintaining scalable Server Actions–based APIs. Made major modernization efforts, upgrading the platform to the latest Next.js and React, migrating from Webpack to Turbopack. and improving the overall architecture using TypeScript, Node.js, Go, and Python to enhance performance, scalability, and developer productivity.",
+    ],
+  },
+  {
+    company: "PAL Aerospace",
+    role: "Intermediate Software Developer",
+    src: "https://palaerospace.com/wp-content/uploads/2024/04/Favicon.png",
+    duration: "July 2025 - October 2025",
+    place: "St. John's, NL",
+    description: [
+      "Created full-stack applications using Angular and Node.js within a monorepo architecture, backed by Microsoft SQL Server and Sequelize ORM. I design and implement RESTful APIs with clear separation of concerns across controllers, services, and repositories, applying Domain-Driven Design (DDD) principles to align technical solutions with business domains. I used software design patterns to build scalable, maintainable, and reusable code, contributing to improved system reliability, faster feature delivery, and a better overall user experience.",
+    ],
+  },
+
+  {
     company: "Focus FS",
     role: "Intermediate Full Stack Software Developer",
     src: "https://res.cloudinary.com/micronetonline/image/upload/c_crop,h_400,w_400,x_0,y_0/v1651855092/tenants/cb9e9e01-1ce4-4bf7-b530-3807d3c7c9b0/b38f24a94c4e40b59410ffa6fc3bd0fe/Focus-FS-Logo.png",
-    color: color.secondary.main,
-    duration: "April 2025 - Present",
+    duration: "April 2025 - July 2025",
     place: "St. John's, NL",
     description: [
       "Developed and maintained dynamic front-end features using Angular, improving user interface responsiveness and overall application usability. Built and integrated RESTful APIs with a MySQL backend to enable efficient data transactions, enhancing system reliability and performance.",
@@ -25,7 +45,7 @@ export const jobs = [
   },
   {
     company: "Celtx / Backlight",
-    role: "Software Developer",
+    role: "Software Developer (CO-OP)",
     duration: "January 2021 - September 2022",
     place: "St. John's, NL",
     src: "https://upload.wikimedia.org/wikipedia/commons/e/e4/Hi_Res_white_on_black_celtx_logo.jpg",

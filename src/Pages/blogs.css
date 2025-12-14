@@ -1,0 +1,14 @@
+.whole {
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    padding-right: 25%;
+    padding-left: 25%;
+    padding-top: 5%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
