@@ -44,7 +44,7 @@ function Body() {
         'A graphical interface game of Sudoko. I have built an solver for the puzzle, which works on "BACK Tracking algorithm". It was a fun side project. I used the backtracking algorithm in this solver because if we try to find each and every solution and try to see if it works then it will take forever. So, by doing some research and talking to some of my seniors, i used the back tracking algorithum. This Project is an product of the bigger project like Richochet Robots. The management skills that i learned from the previous project encouraged me to built this one.',
       software: "Software: PyCharm, Idel.",
       hosted: "Hosted: Github",
-      git: "https://github.com/kathanjshah/Sudoku/tree/master",
+      git: "https://github.com/kathanjayshah/Sudoku/tree/master",
     },
   ];
   const getCard = projectCard.map((cd) => {
@@ -101,19 +101,20 @@ function Body() {
         <div className="about">
           <h1>About Me</h1>
           <p>
-            I am a Intermediate Full Stack Software Developer.
+            I am a Software Developer who loves
+            building things that make a real impact.
           </p>
           <p>
-            My aim is to challenge myself everyday with new problems so I can
-            craft myself into a better engineer everyday.
+            My goal is to challenge myself every day with new problems so I can
+            grow into a better engineer with each one I solve.
           </p>
           <p>
-            When I'm not working, I spend most of my time learning and exploring
-            new concepts. Lately, I’ve been focusing on designing data-intensive
-            applications, improving my problem-solving skills through LeetCode,
-            and deepening my understanding of data structures and algorithms (DSA).
-            I enjoy diving into new areas of knowledge—it’s enriching, fulfilling,
-            and fuels my curiosity as a lifelong learner.
+            Outside of work, I spend most of my time learning and exploring new
+            concepts. Lately, I have been focused on designing data-intensive
+            applications, sharpening my problem-solving skills through LeetCode,
+            and deepening my understanding of data structures and algorithms.
+            I genuinely enjoy diving into new areas of knowledge because it
+            keeps me curious, motivated, and always growing as an engineer.
           </p>
         </div>
         <div>
@@ -164,11 +165,11 @@ function Body() {
       <div id="Contact">
         <h1>Contact</h1>
         <h3>Let's create your next experience together</h3>
-        <h3>kjshah@mun.ca</h3>
-        <a href="https://github.com/kathanjshah">
+        <h3>kathanjayshah@gmail.com</h3>
+        <a href="https://github.com/kathanjayshah">
           <GitHubIcon></GitHubIcon>
         </a>
-        <a href="https://www.linkedin.com/in/kathanjshah/">
+        <a href="https://www.linkedin.com/in/kathanjayshah/">
           <LinkedInIcon></LinkedInIcon>
         </a>
       </div>

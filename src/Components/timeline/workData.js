@@ -3,12 +3,12 @@ import { color } from "../styling/color";
 export const jobs = [
   {
     company: "Ground Control",
-    role: "Senior Software Developer",
+    role: "Software Developer",
     src: "https://cdn.prod.website-files.com/67a19a0ef3b78d34a2d94a47/67a19fed03b9228fab7f0cca_Group%204.svg",
     duration: "October 2025 - Present",
     place: "St. John's, NL",
     description: [
-      "Currently, I’m working on ORCA security alerts to help secure our application against attacks such as SSRF and CSRF, while building and maintaining scalable Server Actions–based APIs. Made major modernization efforts, upgrading the platform to the latest Next.js and React, migrating from Webpack to Turbopack. and improving the overall architecture using TypeScript, Node.js, Go, and Python to enhance performance, scalability, and developer productivity.",
+      "Working at a YC-backed startup building software for contract manufacturers in the aerospace and defense supply chain. Contributing across the full stack using Next.js, Python, and Go to develop tools that streamline First Article Inspection (FAI) generation and ensure AS9102 compliance. I own features end-to-end, working directly with end-users to understand their needs and ship production-ready solutions. I collaborate closely with the founding team to progress the product roadmap, triage issues, and deliver solutions that balance user experience with engineering constraints.",
     ],
   },
   {
