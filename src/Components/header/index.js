@@ -5,24 +5,34 @@ import { useMediaQuery } from "@mui/material";
 function Header() {
   const matches = useMediaQuery("(min-width:720px)");
   return (
-    <div className="header">
+    <header className="header">
       <div className="logos">
-        <div>
-
+        <div className="logoName">
+          <a href="/">
+            Portfolio<span className="mark">.</span>
+          </a>
         </div>
-        <div className="logoName">Portfolio.</div>
       </div>
 
       {matches ? (
-        <div className="groupicons">
-          <div className="clickicons"><a href="/#Experience">Experience</a></div>
-          <div className="clickicons"><a href="/#Education">Education</a></div>
-          <div className="clickicons"><a href="/#About">About</a></div>
-          <div className="clickicons"><a href="/#Contact">Contact</a></div>
-        </div>
-      ) : null}
-      {matches ? null : <TemporaryDrawer></TemporaryDrawer>}
-    </div>
+        <nav className="groupicons" aria-label="Primary">
+          <div className="clickicons">
+            <a href="/#Experience">Experience</a>
+          </div>
+          <div className="clickicons">
+            <a href="/#Education">Education</a>
+          </div>
+          <div className="clickicons">
+            <a href="/#About">About</a>
+          </div>
+          <div className="clickicons">
+            <a href="/#Contact">Contact</a>
+          </div>
+        </nav>
+      ) : (
+        <TemporaryDrawer />
+      )}
+    </header>
   );
 }
 

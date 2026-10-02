@@ -1,60 +1,77 @@
 .header {
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5% 10% 0 10%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-offset);
+  min-height: var(--header-offset);
+  padding: env(safe-area-inset-top, 0px) var(--page-pad) 0;
+  background: #000000;
+  border-bottom: 0;
+  box-shadow: none;
 }
+
 .logos {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
+
 .logoName {
-    font-weight: bold;
-    color: #1976d2;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
 }
-.title {
-    display:flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 2px;
-    font-weight: 400;
+
+.logoName a {
+  color: #ffffff;
 }
+
+.logoName .mark {
+  color: #ffffff;
+}
+
 .groupicons {
-    display: none;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    font-weight: 200;
-    font-size: smaller;
+  display: none;
+  flex-direction: row;
+  gap: 1.75rem;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
 }
-.getstarted {
-    display: none;
-    font-size: small;
-    color: white;
-    background-color: black;
-    padding: 10px;
-    border-radius: 5px;
+
+.clickicons a {
+  color: rgba(255, 255, 255, 0.75);
+  transition: color 160ms ease;
 }
+
+.clickicons a:hover,
+.clickicons a:focus-visible {
+  color: #ffffff;
+}
+
+.header .MuiSvgIcon-root {
+  color: #ffffff;
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 720px) {
-    .groupicons {
-        display:flex;
-    }
-    
-    .getstarted {
-        display: flex;
-    }
-}
+  .header {
+    padding-left: max(var(--page-pad), calc((100% - var(--page-max)) / 2));
+    padding-right: max(var(--page-pad), calc((100% - var(--page-max)) / 2));
+  }
 
-
-.homeimg {
-    height: 40px;
-    width: 40px;
-}
-
-.waymarker {
-    height: 2rem;
-    width: 2rem;
+  .groupicons {
+    display: flex;
+  }
 }

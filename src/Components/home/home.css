@@ -1,3 +1,7 @@
 .whole {
-    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  min-height: 100vh;
+  padding-top: 0;
+  font-family: var(--font-sans);
+  color: var(--text);
+  background: #000000;
 }

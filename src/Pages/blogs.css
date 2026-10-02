@@ -1,14 +1,28 @@
 .whole {
-    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  min-height: 100vh;
+  padding-top: var(--header-h);
+  font-family: var(--font-sans);
+  color: var(--text);
 }
 
-.body {
-    display: flex;
-    flex-direction: column;
-    padding-right: 25%;
-    padding-left: 25%;
-    padding-top: 5%;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+.blogs-body {
+  width: min(100%, var(--page-max));
+  margin: 0 auto;
+  padding: 3rem var(--page-pad) 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.blogs-body h1 {
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.blogs-body h5 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--muted);
 }

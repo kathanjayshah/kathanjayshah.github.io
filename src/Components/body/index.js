@@ -1,179 +1,159 @@
 import "./body.css";
 
-import BugReportIcon from "@mui/icons-material/BugReport";
 import { useState } from "react";
 import GTranslateIcon from "@mui/icons-material/GTranslate";
-import kathan from "../../Assets/kathan34.JPG";
-import js from "../../Assets/js.png";
-import java from "../../Assets/java.png";
-import cplusplus from "../../Assets/cplusplus.png";
-import angular from "../../Assets/Angular.svg.png";
-import css from "../../Assets/css.png";
-import gitpic from "../../Assets/git.png";
-import html from "../../Assets/html.png";
-import python from "../../Assets/python.png";
-import reactpic from "../../Assets/react.png";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Work from "../timeline/timelineCmpt";
 
+import typescript from "../../Assets/typescript.svg";
+import js from "../../Assets/js.png";
+import reactpic from "../../Assets/react.png";
+import nextjs from "../../Assets/nextjs.png";
+import angular from "../../Assets/Angular.svg.png";
+import nodejs from "../../Assets/nodejs.svg";
+import python from "../../Assets/python.png";
+import go from "../../Assets/go.svg";
+import graphql from "../../Assets/graphql.svg";
+import postgresql from "../../Assets/postgresql.svg";
+import mysql from "../../Assets/mysql.svg";
+import gitpic from "../../Assets/git.png";
+import githubactions from "../../Assets/githubactions.svg";
+import html from "../../Assets/html.png";
+import css from "../../Assets/css.png";
+
+const skills = [
+  { name: "TypeScript", src: typescript },
+  { name: "JavaScript", src: js },
+  { name: "React", src: reactpic },
+  { name: "Next.js", src: nextjs },
+  { name: "Angular", src: angular },
+  { name: "Node.js", src: nodejs },
+  { name: "Python", src: python },
+  { name: "Go", src: go },
+  { name: "GraphQL", src: graphql },
+  { name: "PostgreSQL", src: postgresql },
+  { name: "MySQL", src: mysql },
+  { name: "Git", src: gitpic },
+  { name: "CI/CD", src: githubactions },
+  { name: "HTML", src: html },
+  { name: "CSS", src: css },
+];
+
 function Body() {
   const [active, setActive] = useState(false);
-  const handleClick = () => {
-    setActive(!active);
-  };
-  /*
-  const projectCard = [
-    {
-      title: "Ricochet Robots",
-      subheader: "2D-Game",
-      img: require("../../Assets/board.png"),
-      language: "Language: Java",
-      detail:
-        'A simple implementation of Alex Randolph\'s board game Ricochet Robots including solver. This game is witten in JAVA. Where I learned some of the major algorithms in Computer science, one of such is "Find and hunt" algorithum. Over this I built an AI that can give the solution of the puzzle. The most intresting part was to learn how to build the GUI and the "back-end" supporting it. All the updates were done periodically in 4 different Iteration. This Project is hosted on Github, which leads me to learn the version control language, git. The whole design was created by me and all the code was led by me.',
-      software: "Software: Eclipse, IntelliJ.",
-      hosted: "Hosted: Github",
-      git: "https://github.com/djgrillopena/comp2005-winter20-group11",
-    },
-    {
-      title: "Sudoko Solver",
-      subheader: "2D-Game Solver",
-      img: require("../../Assets/Sudoko.png"),
-      language: "Language: Python",
-      detail:
-        'A graphical interface game of Sudoko. I have built an solver for the puzzle, which works on "BACK Tracking algorithm". It was a fun side project. I used the backtracking algorithm in this solver because if we try to find each and every solution and try to see if it works then it will take forever. So, by doing some research and talking to some of my seniors, i used the back tracking algorithum. This Project is an product of the bigger project like Richochet Robots. The management skills that i learned from the previous project encouraged me to built this one.',
-      software: "Software: PyCharm, Idel.",
-      hosted: "Hosted: Github",
-      git: "https://github.com/kathanjayshah/Sudoku/tree/master",
-    },
-  ];
-  const getCard = projectCard.map((cd) => {
-    return (
-      <MediaCard
-        title={cd.title}
-        subheader={cd.subheader}
-        img={cd.img}
-        language={cd.language}
-        detail={cd.detail}
-        software={cd.software}
-        hosted={cd.hosted}
-        git={cd.git}
-      />
-    );
-  });*/
 
   return (
-    <div className="body">
-      <div className="body1">
-        <div className="discription">
-          <div className="helloWorld"></div>
-          <h1>
-            &lt;Hello World! &gt; <br /> I'm{" "}
-            <span style={{ color: "#1976d2" }}>Kathan</span> Shah
-          </h1>
-          <div className="developer">
-            <BugReportIcon />
-            <p>Full Stack Developer</p>
-          </div>
+    <main className="body">
+      <section className="hero" aria-label="Introduction">
+        <div className="hero-inner">
+          <p className="hero-role">Member of Technical Staff</p>
+          <h1 className="hero-brand">Kathan Shah</h1>
         </div>
-      </div>
-      <div className="body2">
-        <h3 onClick={handleClick}>
-          {!active ? (
-            <span>"આ સમય પણ વહી જશે"</span>
-          ) : (
-            <span>"This time shall pass too"</span>
-          )}
-          <GTranslateIcon className="translate" />
-        </h3>
-        <p> - Narendra Lalchand Shah(Grandfather)</p>
-      </div>
+      </section>
 
-      <div id="Experience" className="body3">
-        <h1>Work Experience</h1>
-        <Work work={true} />
-      </div>
-      <div id="Education" className="body4">
-        <h1>Education</h1>
-        <Work education={true} />
-      </div>
-      <div id="About" className="body6">
-        <div className="about">
-          <h1>About Me</h1>
-          <p>
-            I am a Software Developer who loves
-            building things that make a real impact.
-          </p>
-          <p>
-            My goal is to challenge myself every day with new problems so I can
-            grow into a better engineer with each one I solve.
-          </p>
-          <p>
-            Outside of work, I spend most of my time learning and exploring new
-            concepts. Lately, I have been focused on designing data-intensive
-            applications, sharpening my problem-solving skills through LeetCode,
-            and deepening my understanding of data structures and algorithms.
-            I genuinely enjoy diving into new areas of knowledge because it
-            keeps me curious, motivated, and always growing as an engineer.
-          </p>
+      <div className="page-content">
+        <section className="quote" aria-label="Favorite quote">
+          <button
+            type="button"
+            className="quote-toggle"
+            onClick={() => setActive((v) => !v)}
+            aria-label="Translate quote"
+          >
+            {!active ? (
+              <span>{'\u0A86 \u0AB8\u0AAE\u0AAF \u0AAA\u0AA3 \u0AB5\u0AB9\u0AC0 \u0A9C\u0AB6\u0AC7'}</span>
+            ) : (
+              <span>This time shall pass too</span>
+            )}
+            <GTranslateIcon className="translate" />
+          </button>
+          <p className="quote-attr">Narendra Lalchand Shah, Grandfather</p>
+        </section>
+
+        <section id="Experience" className="section">
+          <h2 className="section-title">Experience</h2>
+          <Work work={true} />
+        </section>
+
+        <section id="Education" className="section">
+          <h2 className="section-title">Education</h2>
+          <Work education={true} />
+        </section>
+
+        <div className="about-skills-grid">
+          <section id="About" className="section">
+            <h2 className="section-title">About</h2>
+            <div className="about">
+              <p>
+                I&apos;m a Member of Technical Staff who likes shipping software
+                that holds up in the real world: clear APIs, sharp UX, and systems
+                people can trust when it matters.
+              </p>
+              <p>
+                Day to day I work across the stack on product software, from
+                data-heavy features and AI-assisted workflows to services,
+                databases, and deployment pipelines. I care about clean design,
+                solid engineering judgment, and getting hard problems into
+                production.
+              </p>
+              <p>
+                Outside of work I hike, play cricket, and hang out with my dog.
+              </p>
+            </div>
+          </section>
+
+          <section id="skills" className="section">
+            <h2 className="section-title">Skills</h2>
+            <ul className="skills">
+              {skills.map((skill) => (
+                <li key={skill.name} className="skill-item">
+                  <img className="skill" src={skill.src} alt={skill.name} />
+                  <span>{skill.name}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
         </div>
-        <div>
-          <img src={kathan} className="kathan" alt="Kathan Shah profile" />
-        </div>
+
+        <section id="Contact" className="section contact">
+          <h2 className="section-title">Contact</h2>
+          <div className="contact-row">
+            <div className="contact-links">
+              <a
+                href="https://github.com/kathanjayshah"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub"
+              >
+                <GitHubIcon />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/kathanjayshah/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+              >
+                <LinkedInIcon />
+              </a>
+            </div>
+            <a className="contact-email" href="mailto:kathanjayshah@gmail.com">
+              kathanjayshah@gmail.com
+            </a>
+          </div>
+          <p className="photo-credit">
+            Hero image: SpaceX Starship Flight 14, via{" "}
+            <a
+              href="https://www.space.com/space-exploration/launches-spacecraft/starship-just-reached-orbit-for-the-1st-time-whats-next-for-the-spacex-megarocket"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Space.com
+            </a>
+            .
+          </p>
+        </section>
       </div>
-      <div id="skills">
-        <h1>Skills</h1>
-        <div className="skills">
-          <div>
-            <p></p>
-            <img className="skill" src={reactpic} alt="React" />
-          </div>
-          <div>
-            <p></p>
-            <img className="skill" src={js} alt="JavaScript" />
-          </div>
-          <div>
-            <p></p>
-            <img className="skill" src={python} alt="Python" />
-          </div>
-          <div>
-            <p></p>
-            <img className="skill" src={angular} alt="Angular" />
-          </div>
-          <div>
-            <p></p>
-            <img className="skill" src={cplusplus} alt="C++" />
-          </div>
-          <div>
-            <p></p>
-            <img className="skill" src={java} alt="Java" />
-          </div>
-          <div>
-            <p></p>
-            <img className="skill" src={gitpic} alt="Git" />
-          </div>
-          <div>
-            <p></p>
-            <img className="skill" src={html} alt="HTML" />
-          </div>
-          <div>
-            <p></p>
-            <img className="skill" src={css} alt="CSS" />
-          </div>
-        </div>
-      </div>
-      <div id="Contact">
-        <h1>Contact</h1>
-        <h3>Let's create your next experience together</h3>
-        <h3>kathanjayshah@gmail.com</h3>
-        <a href="https://github.com/kathanjayshah">
-          <GitHubIcon></GitHubIcon>
-        </a>
-        <a href="https://www.linkedin.com/in/kathanjayshah/">
-          <LinkedInIcon></LinkedInIcon>
-        </a>
-      </div>
-    </div>
+    </main>
   );
 }
 

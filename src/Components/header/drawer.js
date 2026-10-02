@@ -7,59 +7,77 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 
-export default function TemporaryDrawer() {
-  const [state, setState] = React.useState({
-    right: false,
-  });
+const links = ["Experience", "Education", "About", "Contact"];
 
-  const toggleDrawer = (anchor, open) => (event) => {
+export default function TemporaryDrawer() {
+  const [open, setOpen] = React.useState(false);
+
+  const toggle = (next) => (event) => {
     if (
       event.type === "keydown" &&
       (event.key === "Tab" || event.key === "Shift")
     ) {
       return;
     }
-
-    setState({ ...state, [anchor]: open });
+    setOpen(next);
   };
-
-  const list = (anchor) => (
-    <Box
-      sx={{ width: anchor === "right" || anchor === "bottom" ? "auto" : 250 }}
-      role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-    >
-      <List>
-        {["Experience", "Education", "About", "Contact"].map(
-          (text, index) => (
-            <ListItem key={text} disablePadding>
-              <a href={"#"+text}>
-                <ListItemButton>
-                  <ListItemText primary={text} />
-                </ListItemButton>
-              </a>
-            </ListItem>
-          )
-        )}
-      </List>
-    </Box>
-  );
 
   return (
     <div>
-      {["right"].map((anchor) => (
-        <React.Fragment key={anchor}>
-          <MenuIcon onClick={toggleDrawer(anchor, true)}>{anchor}</MenuIcon>
-          <Drawer
-            anchor={anchor}
-            open={state[anchor]}
-            onClose={toggleDrawer(anchor, false)}
-          >
-            {list(anchor)}
-          </Drawer>
-        </React.Fragment>
-      ))}
+      <MenuIcon
+        onClick={toggle(true)}
+        aria-label="Open menu"
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") toggle(true)(e);
+        }}
+      />
+      <Drawer
+        anchor="right"
+        open={open}
+        onClose={toggle(false)}
+        PaperProps={{
+          sx: {
+            width: 260,
+            backgroundColor: "#000000",
+            color: "#ffffff",
+            borderLeft: "1px solid rgba(255,255,255,0.18)",
+          },
+        }}
+      >
+        <Box
+          role="presentation"
+          onClick={toggle(false)}
+          onKeyDown={toggle(false)}
+          sx={{ pt: 2 }}
+        >
+          <List>
+            {links.map((text) => (
+              <ListItem key={text} disablePadding>
+                <ListItemButton
+                  component="a"
+                  href={`#${text}`}
+                  sx={{
+                    py: 1.25,
+                    "&:hover": { backgroundColor: "rgba(255,255,255,0.08)" },
+                  }}
+                >
+                  <ListItemText
+                    primary={text}
+                    primaryTypographyProps={{
+                      fontWeight: 600,
+                      fontSize: "0.75rem",
+                      letterSpacing: "0.12em",
+                      textTransform: "uppercase",
+                    }}
+                  />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+      </Drawer>
     </div>
   );
 }

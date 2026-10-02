@@ -6,12 +6,8 @@ import Body from '../body/index'
 function Home() {
   return (
     <div className='whole'>
-        <div>
-            <Header/>
-        </div>
-        <div>
-            <Body/>
-        </div>
+      <Header />
+      <Body />
     </div>
   )
 }
