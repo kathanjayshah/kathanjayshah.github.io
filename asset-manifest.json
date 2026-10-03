@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d6e1558a.css",
-    "main.js": "/static/js/main.f66e2569.js",
+    "main.css": "/static/css/main.a5bfd925.css",
+    "main.js": "/static/js/main.ef5e1534.js",
     "static/js/488.1519462e.chunk.js": "/static/js/488.1519462e.chunk.js",
     "static/media/falcon9-launch.jpg": "/static/media/falcon9-launch.9619b2370c76de902acf.jpg",
     "static/media/MUN-logo-800x492.png": "/static/media/MUN-logo-800x492.592f3a0e16a62f4a3937.png",
@@ -15,12 +15,12 @@
     "static/media/graphql.svg": "/static/media/graphql.14267f2ddb307badb38d0804e8151bcd.svg",
     "index.html": "/index.html",
     "static/media/typescript.svg": "/static/media/typescript.8d9549db1a0f5d73a35aa5dab48a09f9.svg",
-    "main.d6e1558a.css.map": "/static/css/main.d6e1558a.css.map",
-    "main.f66e2569.js.map": "/static/js/main.f66e2569.js.map",
+    "main.a5bfd925.css.map": "/static/css/main.a5bfd925.css.map",
+    "main.ef5e1534.js.map": "/static/js/main.ef5e1534.js.map",
     "488.1519462e.chunk.js.map": "/static/js/488.1519462e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d6e1558a.css",
-    "static/js/main.f66e2569.js"
+    "static/css/main.a5bfd925.css",
+    "static/js/main.ef5e1534.js"
   ]
 }
