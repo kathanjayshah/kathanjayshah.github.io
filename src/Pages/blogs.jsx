@@ -3,7 +3,7 @@ import './blogs.css'
 
 function Blogs() {
     return (
-        <div className="whole">
+        <div className="blogs-page">
             <Header />
             <div className='blogs-body'>
                 <h1>Blogs</h1>

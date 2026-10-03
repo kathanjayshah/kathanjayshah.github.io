@@ -83,7 +83,7 @@ Applied on `.page-content` only, not the hero.
 ## Components
 
 ### Header
-Fixed solid black bar (`position: fixed`) with a thin white bottom edge. Hero image starts at the top of the page and runs under the nav, so there is no gap when scrolling.
+Fixed transparent nav (`position: fixed`) with white text so the hero shows through. Hero image starts at the top of the page and runs under the nav.
 
 ### Hero
 Near full viewport over the launch image. Name, short lead, two square outlined CTAs (filled + ghost).

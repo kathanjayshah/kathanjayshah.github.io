@@ -1,8 +1,9 @@
-.whole {
+.blogs-page {
   min-height: 100vh;
-  padding-top: var(--header-h);
+  padding-top: var(--header-offset);
   font-family: var(--font-sans);
   color: var(--text);
+  background: var(--bg);
 }
 
 .blogs-body {

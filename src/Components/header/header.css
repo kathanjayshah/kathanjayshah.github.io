@@ -1,4 +1,4 @@
-.header {
+.site-header {
   position: fixed;
   top: 0;
   left: 0;
@@ -11,34 +11,48 @@
   height: var(--header-offset);
   min-height: var(--header-offset);
   padding: env(safe-area-inset-top, 0px) var(--page-pad) 0;
-  background: #000000;
-  border-bottom: 0;
-  box-shadow: none;
+  background: transparent !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+  border: 0 !important;
+  border-bottom: 1px solid transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(0) saturate(1) !important;
+  -webkit-backdrop-filter: blur(0) saturate(1) !important;
+  transition:
+    background-color 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    backdrop-filter 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    -webkit-backdrop-filter 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 420ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.logos {
+.site-header .logos {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.logoName {
+.site-header .logoName {
   font-weight: 700;
   font-size: 1rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
+  transition:
+    color 360ms cubic-bezier(0.22, 1, 0.36, 1),
+    text-shadow 360ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.logoName a {
-  color: #ffffff;
+.site-header .logoName a {
+  color: inherit;
+  transition: color 360ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.logoName .mark {
-  color: #ffffff;
+.site-header .logoName .mark {
+  color: inherit;
 }
 
-.groupicons {
+.site-header .groupicons {
   display: none;
   flex-direction: row;
   gap: 1.75rem;
@@ -47,31 +61,80 @@
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.clickicons a {
-  color: rgba(255, 255, 255, 0.75);
-  transition: color 160ms ease;
+.site-header .clickicons a {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
+  transition:
+    color 360ms cubic-bezier(0.22, 1, 0.36, 1),
+    text-shadow 360ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.clickicons a:hover,
-.clickicons a:focus-visible {
+.site-header .clickicons a:hover,
+.site-header .clickicons a:focus-visible {
   color: #ffffff;
 }
 
-.header .MuiSvgIcon-root {
+.site-header .MuiSvgIcon-root {
   color: #ffffff;
   cursor: pointer;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.65));
+  transition:
+    color 360ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 360ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Over white page content: frosted bar + dark type */
+.site-header--on-light {
+  background: rgba(255, 255, 255, 0.72) !important;
+  background-color: rgba(255, 255, 255, 0.72) !important;
+  backdrop-filter: blur(14px) saturate(1.2) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(1.2) !important;
+  border-bottom-color: rgba(26, 26, 26, 0.08) !important;
+}
+
+.site-header--on-light .logoName,
+.site-header--on-light .logoName a,
+.site-header--on-light .logoName .mark {
+  color: #1a1a1a;
+  text-shadow: 0 0 0 transparent;
+}
+
+.site-header--on-light .groupicons,
+.site-header--on-light .clickicons a {
+  color: #1a1a1a;
+  text-shadow: 0 0 0 transparent;
+}
+
+.site-header--on-light .clickicons a:hover,
+.site-header--on-light .clickicons a:focus-visible {
+  color: #000000;
+}
+
+.site-header--on-light .MuiSvgIcon-root {
+  color: #1a1a1a;
+  filter: drop-shadow(0 0 0 transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header,
+  .site-header .logoName,
+  .site-header .logoName a,
+  .site-header .clickicons a,
+  .site-header .MuiSvgIcon-root {
+    transition: none;
+  }
 }
 
 @media only screen and (min-width: 720px) {
-  .header {
+  .site-header {
     padding-left: max(var(--page-pad), calc((100% - var(--page-max)) / 2));
     padding-right: max(var(--page-pad), calc((100% - var(--page-max)) / 2));
   }
 
-  .groupicons {
+  .site-header .groupicons {
     display: flex;
   }
 }

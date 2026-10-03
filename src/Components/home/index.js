@@ -5,11 +5,11 @@ import Body from '../body/index'
 
 function Home() {
   return (
-    <div className='whole'>
+    <div className="whole">
       <Header />
       <Body />
     </div>
-  )
+  );
 }
 
 export default Home
